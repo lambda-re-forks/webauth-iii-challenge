@@ -9,3 +9,5 @@ configuremiddleware(server);
 
 server.get("/", (req, res) => res.send("<h1>WebAuth-III</h1>"));
 server.use("/api", userRouter);
+
+module.exports = server;
