@@ -20,6 +20,7 @@
   "homepage": "https://github.com/lambda-re-forks/webauth-iii-challenge#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "helmet": "^3.20.0",
     "jsonwebtoken": "^8.5.1",
@@ -29,7 +30,6 @@
     "sqlite3": "^4.0.9"
   },
   "devDependencies": {
-    "dotenv": "^8.0.0",
     "nodemon": "^1.19.1"
   }
 }
