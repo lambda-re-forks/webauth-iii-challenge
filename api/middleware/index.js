@@ -1,4 +1,5 @@
 module.exports = {
   validateUserInfoExists: require("./validateUserInfoExists"),
-  validateUsernameUnique: require("./valideUsernameUnique")
+  validateUsernameUnique: require("./valideUsernameUnique"),
+  restricted: require("./restricted")
 };

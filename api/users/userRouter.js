@@ -5,7 +5,8 @@ const userDb = require("./userModel");
 
 const {
   validateUserInfoExists,
-  validateUsernameUnique
+  validateUsernameUnique,
+  restricted
 } = require("../middleware");
 
 const router = express.Router();
@@ -42,6 +43,17 @@ router.post("/login", validateUserInfoExists, async (req, res) => {
   } catch (error) {
     res.status(500).json({
       errorMessage: "Something went wrong when registering the user"
+    });
+  }
+});
+
+router.get("/users", restricted, async (req, res) => {
+  try {
+    const users = await userDb.findInfo();
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({
+      errorMessage: "Something went wrong when getting the users"
     });
   }
 });
