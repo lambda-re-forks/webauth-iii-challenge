@@ -47,7 +47,7 @@ router.post("/login", validateUserInfoExists, async (req, res) => {
   }
 });
 
-router.get("/users", restricted, async (req, res) => {
+router.get("/users", async (req, res) => {
   try {
     const users = await userDb.findInfo();
     res.status(200).json(users);
